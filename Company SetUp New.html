@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Company Setup Search</title>
+</head>
+
+<body>
+    <div class="container"></div>
+    <header nav class="navbar navbar-toggleable-md bg-faded navbar-inverse bg-primary">
+        <h1 class="navbar-brand" href="#">Company Setup</h1>
+        </nav>
+    </header> 
+    <div class="container-fluid mt-4">
+        <!-- <header nav class="navbar navbar-toggleable-md bg-faded navbar-inverse bg-primary"> -->
+        <h3 class="navbar-brand" href="#">Company Setup-Search</h3>
+      </nav>
+    </header>
+    </div>
+    <div class="container-fluid">
+        <div class="container-fluid form-row">
+    <form >
+        <div class="row">
+            
+                <div class="form-group col-md-3">
+                    <label for="inputCompanyCode">Company Code</label>
+                    <input type="text" class="form-control" id="companyCode">
+                 </div> 
+                <div class="form-group col-md-3">
+                    <label for="inputCompanyName">Company Name</label>
+                    <input type="text" class="form-control" id="companyName">
+                </div>
+                <div class="form-group col-md-3"> 
+                    <label for="inputcountry">Country</label>
+                    <input type="text" class="form-control" id="country">
+                 </div>
+                <div class="form-group col-md-3"> 
+                    <label for="inputStatus">Status</label>
+                    <select id="inputStatus" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>.</option>
+                        <option>..</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            </div>
+     </form>
+            
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="container"></div>
+    <header  class="navbar navbar-toggleable-md bg-faded navbar-inverse bg-primary">
+    <h3>Company List</h3>
+    </header>
+    <br>
+    <div class="container-fluid">
+    <table id="example" ></table>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+
+<script>
+    
+
+   $(document).ready(function() {	  	
+   	$('#example').DataTable({
+   "data" : [],
+   "columns" : [
+   { "data" : "#",title:"#",className: "center" },
+   { "data" : "code",title:"Code",className: "center" },
+   { "data" : "name",title:"Name",className: "center" },
+   { "data" : "address",title:"Address",className: "center" },
+   { "data" : "telephone",title:"Telephone",className: "center" },
+   { "data" : "country",title:"Country",className: "center" },
+   { "data" : "email",title:"Email",className: "center" },
+   { "data" : "remark",title:"Remark" ,className: "center"},
+   { "data" : "status",title:"Status",className: "center" },
+   ]
+   });
+  });
+   
+    </script>
+</html>
